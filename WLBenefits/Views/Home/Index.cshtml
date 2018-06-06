@@ -1,0 +1,109 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BenefitsTalk</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="~/Content/Styles/home.css" />
+
+</head>
+<body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">WL Benefits group</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    @*<a class="nav-link active" href="#">Home</a>*@
+                    <a class="nav-link active " href='@Url.Action("Index", "Login")' )>Login</a>
+
+                </nav>
+            </div>
+        </header>
+
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">BenefitsTalk</h1>
+            <p class="lead">
+                Our BenefitsTalk™ technology provides a customizable web-based employee self-service portal that compliments your HRIS/payroll system and provides a single point of contact for all employee benefit related needs.
+
+                Organizations using BenefitsTalk enjoy increased efficiency and reduced costs associated with employee benefit administration while employees benefit from greater access to benefit plan information and convenient toll-free access to our integrated customer service call center.
+            </p>
+
+            <button type="button" class="btn  btn-lg btn-secondary" data-toggle="modal" data-target="#exampleModal">
+                Get demo
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Get Demo</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group row">
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="firstname" placeholder="First Name">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+
+                                    <div class="col-sm-10">
+                                        <input type="email" class="form-control" id="inputPassword" placeholder="Email">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+
+                                    <div class="col-sm-10">
+                                        <input type="number" class="form-control" id="inputPassword" placeholder="Phone number">
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input class="btn btn-primary" type="submit" value="Submit">
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>BenefitsTalk Powered by Wl Benefits Group <a href="http://www.wlbenefitsgroup.com/">&copy 2018 Wl benefits group</a></p>
+            </div>
+        </footer>
+    </div>
+
+
+
+    @Html.Partial("~/Views/Shared/_Javascripts.cshtml")
+</body>
+</html>
+
+
+

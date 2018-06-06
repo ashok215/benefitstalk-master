@@ -1,0 +1,91 @@
+﻿.navbar-brand {
+    font-weight: 700;
+    color: #4E65A9;
+}
+
+h3, h4 {
+    color: #1F346B;
+}
+
+.btn {
+    width: 125px;
+    height: 30px;
+    border-radius: 4px !important;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 6px 16px;
+    border: none;
+    box-shadow: 0 .50rem 1rem rgba(0, 0, 0, .05);
+}
+
+
+.btn-primary, .btn-primary:hover {
+    background: #4E65A9;
+    color: white;
+    border: solid 0.1em #4E65A9;
+}
+
+.btn-default, .btn-default:hover {
+    background: #828282;
+    color: white;
+}
+
+.btn-primary-wide, .btn-primary-wide:hover {
+    box-shadow: none;
+    border: solid 0.1em #4E65A9;
+    padding-right: 24px;
+    padding-left: 24px;
+    background: #4E65A9;
+    color: white;
+}
+
+.btn-outline-default, .btn-outline-default:hover {
+    color: white;;
+    box-shadow: none;
+    border: solid 0.1em #4E65A9;
+    padding-right: 28px;
+    padding-left: 24px;
+    background-color: #4E65A9;
+}
+
+.progress-bar {
+    background-color: #4E65A9;
+}
+
+.border-primary {
+    border-color: #4E65A9 !important;
+}
+
+.badge-primary {
+    background-color: #4E65A9;
+}
+a{
+    color:black;
+    text-decoration:none;
+}
+    
+
+input {
+    outline: none;
+}
+
+.form-control-plaintext {
+    line-height: 1;
+    padding: 0;
+}
+
+.card-deck .card {
+    min-width: 220px;
+}
+
+    .card-deck .card > .card-link {
+        color: #212529;
+        text-decoration: none;
+    }
+
+.card-title.horizontal {
+    line-height: 100px;
+    vertical-align: top;
+    margin-bottom: 0;
+}

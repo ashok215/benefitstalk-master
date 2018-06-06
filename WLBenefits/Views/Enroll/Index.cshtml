@@ -1,0 +1,227 @@
+﻿@{
+    ViewBag.Title = "Enroll Now";
+}
+@section js{
+    <script src="/Content/Scripts/Enroll-Index.js"></script>
+}
+
+<div class="row my-5">
+    <div class="col">
+        <h1>@ViewBag.Title</h1>
+    </div>
+    <div class="col text-right">
+        <a href="/Enroll/Edit" class="btn btn-primary px-4">Continue</a>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-4">
+        <small class="text-muted">Available Coverage Options</small>
+        <div data-id="0" class="p-3 card mb-3 box-shadow plans plan-disabled">
+            <span class="red-dot"></span>
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-user fa-3x m-2"></i>
+                </div>
+                <div class="col-9">
+                    <h5 class="card-title m-0">Add Yourself</h5>
+                    <p class="card-text text-muted">
+                        Enter basic personal information
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div data-id="1" class="p-3 card mb-3 box-shadow plans">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-child fa-3x m-2"></i>
+                </div>
+                <div class="col-9">
+                    <h5 class="card-title m-0">Add Dependents</h5>
+                    <p class="card-text text-muted">
+                        Enter basic personal information
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div data-id="2" class="p-3 card mb-3 box-shadow plans">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-users fa-3x m-2"></i>
+                </div>
+                <div class="col-9">
+                    <h5 class="card-title m-0">Add Beneficiaries</h5>
+                    <p class="card-text text-muted">
+                        Enter basic personal information
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div data-id="3" class="p-3 card mb-3 box-shadow plans">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-heart-o fa-3x m-2"></i>
+                </div>
+                <div class="col-9">
+                    <h5 class="card-title m-0">Add Medical</h5>
+                    <p class="card-text text-muted">
+                        Enter basic personal information
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div data-id="4" class="p-3 card mb-3 box-shadow plans">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-user-md fa-3x m-2"></i>
+                </div>
+                <div class="col-9">
+                    <h5 class="card-title m-0">Add Dental</h5>
+                    <p class="card-text text-muted">
+                        Enter basic personal information
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div data-id="5" class="p-3 card mb-3 box-shadow plans">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-eye fa-3x m-2"></i>
+                </div>
+                <div class="col-9">
+                    <h5 class="card-title m-0">Add Vision</h5>
+                    <p class="card-text text-muted">
+                        Enter basic personal information
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div data-id="5" class="p-3 card mb-3 box-shadow plans plan-disabled">
+            <span class="red-dot"></span>
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-suitcase fa-3x m-2"></i>
+                </div>
+                <div class="col-9">
+                    <h5 class="card-title m-0">Add Basic Life</h5>
+                    <p class="card-text text-muted">
+                        Enter basic personal information
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div data-id="6" class="p-3 card mb-3 box-shadow plans">
+            <div class="row">
+                <div class="col-3">
+                    <i class="fa fa-money fa-3x m-2"></i>
+                </div>
+                <div class="col-9">
+                    <h5 class="card-title m-0">Add Supplemental Life</h5>
+                    <p class="card-text text-muted">
+                        Enter basic personal information
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+        <div class="p-4 engraved rounded">
+            <img src="~/Content/Images/arrow.png" id="Arrow" />
+            <div id="Instructions" class="position-absolute">
+                <h4 class="text-secondary text-center">Drag-and-drop</h4>
+                <p class="text-secondary text-center">
+                    The available options you're interested in editing or adding to your benefits election.
+                    Leave any coverage options you don't want on the left side.  Please note that you are required to add any coverage paid for by your employer (marked with <img id="RedDot" src="~/Content/Images/red-dot.png" />)
+                </p>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6">
+                    <div class="plan-placeholder rounded ui-droppable">
+                        <div class="p-3 card mb-3 box-shadow plans ui-draggable ui-draggable-handle">
+                            <span class="red-dot"></span>
+                            <div class="row">
+                                <div class="col-3">
+                                    <i class="fa fa-user fa-3x m-2"></i>
+                                </div>
+                                <div class="col-9">
+                                    <h5 class="card-title m-0">Add Yourself</h5>
+                                    <p class="card-text text-muted">
+                                        Enter basic personal information
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="plan-placeholder rounded ui-droppable">
+                        <div class="p-3 card mb-3 box-shadow plans ui-draggable ui-draggable-handle">
+                            <span class="red-dot"></span>
+                            <div class="row">
+                                <div class="col-3">
+                                    <i class="fa fa-suitcase fa-3x m-2"></i>
+                                </div>
+                                <div class="col-9">
+                                    <h5 class="card-title m-0">Add Basic Life</h5>
+                                    <p class="card-text text-muted">
+                                        Enter basic personal information
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-6">
+                    <div class="plan-placeholder open rounded">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="plan-placeholder open rounded">
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-6">
+                    <div class="plan-placeholder open rounded">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="plan-placeholder open rounded">
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-6">
+                    <div class="plan-placeholder open rounded">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="plan-placeholder open rounded">
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-6">
+                    <div class="plan-placeholder open rounded">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="plan-placeholder open rounded">
+                    </div>
+                </div>
+            </div>
+            <div class="row my-2">
+                <div class="col-6">
+                    <div class="plan-placeholder open rounded">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="plan-placeholder open rounded">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

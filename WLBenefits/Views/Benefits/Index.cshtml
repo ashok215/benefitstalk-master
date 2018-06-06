@@ -1,0 +1,189 @@
+﻿@{
+    ViewBag.Title = "My Information";
+}
+<h1 class="my-5">@ViewBag.Title</h1>
+<div class="row mb-3">
+    <div class="col-8">
+        <div class="p-5 card box-shadow">
+            <div class="row mt-1 no-gutter">
+                <div class="col no-gutter">
+                    <h6 class="green-header">Your Information</h6>
+                </div>
+                <div class="col no-gutter text-right">
+                    <a href="#" class="btn btn-outline-default">Edit</a>
+                </div>
+            </div>
+            <div class="row py-2 dashed-bottom no-gutters">
+                <div class="col text-muted ">
+                    Name
+                </div>
+                <div class="col ">
+                    Phil Miller
+                </div>
+            </div>
+            <div class="row py-2 dashed-bottom no-gutters">
+                <div class="col text-muted ">
+                    Address
+                </div>
+                <div class="col ">
+                    2555 W Logan Blvd, Chicago, IL 60647
+                </div>
+            </div>
+            <div class="row py-2 dashed-bottom no-gutters">
+                <div class="col text-muted ">
+                    Phone
+                </div>
+                <div class="col ">
+                    (224) xxx-xxxx
+                </div>
+            </div>
+            <div class="row py-2 dashed-bottom no-gutters">
+                <div class="col text-muted">
+                    SSN
+                </div>
+                <div class="col">
+                    xxx-xx-1234
+                </div>
+            </div>
+            <div class="row py-2 dashed-bottom no-gutters">
+                <div class="col text-muted">
+                    Birth Day
+                </div>
+                <div class="col">
+                    2/9/1987
+                </div>
+            </div>
+
+            <div class="row mt-5 no-gutters">
+                <div class="col">
+                    <h6 class="green-header">Your Dependents</h6>
+                </div>
+                <div class="col text-right">
+                    <a href="/Dependents" class="btn btn-outline-default">Edit</a>
+                </div>
+            </div>
+            <div class="row py-2 dashed-bottom no-gutters">
+                <div class="col text-muted no-gutter">
+                    Meg Miller; spouse
+                </div>
+                <div class="col green-verification">
+                    <i class="fa fa-check"></i> Verification approved
+                </div>
+            </div>
+            <div class="row py-2 dashed-bottom no-gutters">
+                <div class="col text-muted">
+                    Lily Miller; child
+                </div>
+                <div class="col no-gutter yellow-verification">
+                    <i class="fa fa-clock-o"></i> Verification pending
+                </div>
+            </div>
+
+            <div class="row mt-5 no-gutters">
+                <div class="col">
+                    <h6 class="green-header">Your Beneficiaries</h6>
+                </div>
+                <div class="col text-right">
+                    <a href="/Beneficiaries" class="btn btn-outline-default">Edit</a>
+                </div>
+            </div>
+            <div class="row py-2 dashed-bottom no-gutters">
+                <div class="col text-muted">
+                    Meg Miller; spouse
+                </div>
+                <div class="col">
+                    70%
+                </div>
+            </div>
+            <div class="row py-2 dashed-bottom no-gutters">
+                <div class="col text-muted">
+                    Lily Miller; child
+                </div>
+                <div class="col">
+                    30%
+                </div>
+            </div>
+
+            <div class="row mt-5 no-gutters">
+                <div class="col">
+                    <h6 class="green-header">Your Medical Coverage</h6>
+                </div>
+                <div class="col text-right">
+                    <button class="btn btn-outline-default">Request Card</button>
+                    <button class="btn btn-outline-default">Contact Carrier</button>
+                </div>
+            </div>
+            <div class="row py-2 dashed-bottom no-gutters">
+                <div class="col text-muted">
+                    Coordicated Care; Employee Only
+                </div>
+                <div class="col">
+                    $90.00/<span class="text-muted">period</span>
+                </div>
+            </div>
+
+            <div class="row mt-5 no-gutters">
+                <div class="col">
+                    <h6 class="green-header">Your Dental Coverage</h6>
+                </div>
+                <div class="col text-right">
+                    <button class="btn btn-outline-default">Contact Carrier</button>
+                </div>
+            </div>
+            <div class="row py-2 dashed-bottom no-gutters">
+                <div class="col text-muted">
+                    Wellness Plus; Employee + Spouse
+                </div>
+                <div class="col">
+                    $48.00/<span class="text-muted">period</span>
+                </div>
+            </div>
+            <div class="row py-2 dashed-bottom no-gutters">
+                <div class="col text-muted">
+                    Eye Care Advantage; Employee + Family
+                </div>
+                <div class="col">
+                    $62.00/<span class="text-muted">period</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="p-4 dashed rounded">
+            <h6 class="green-header">Your total deductions for 2018</h6>
+            <div class="row text-muted mt-3">
+                <div class="col">
+                    Medical Coverage
+                </div>
+                <div class="col">
+                    $90.00
+                </div>
+            </div>
+            <div class="row text-muted mt-1">
+                <div class="col">
+                    Dental Coverage
+                </div>
+                <div class="col">
+                    $62.00
+                </div>
+            </div>
+            <div class="row text-muted mt-1">
+                <div class="col">
+                    Vision Coverage
+                </div>
+                <div class="col">
+                    $48.00
+                </div>
+            </div>
+            <div class="row font-weight-bold mt-2">
+                <div class="col">
+                    Total
+                </div>
+                <div class="col">
+                    $200.00
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

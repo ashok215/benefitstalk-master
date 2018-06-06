@@ -1,0 +1,331 @@
+﻿@{
+    ViewBag.Title = "Enroll Now";
+}
+@section css{
+    <style>
+        .btn-toggle {
+            width: 105px;
+        }
+    </style>
+}
+@section js{
+    <script>
+        $(function () {
+            $('.medical').on('click', function () {
+                $('.medical').toggleClass('btn-primary', false).toggleClass('btn-outline-default', true).text('Select');
+                $(this).toggleClass('btn-primary', true).toggleClass('btn-outline-default', false).text('Selected');
+            });
+            $('.care').on('click', function () {
+                $('.care').toggleClass('btn-primary', false).toggleClass('btn-outline-default', true).text('Select');
+                $(this).toggleClass('btn-primary', true).toggleClass('btn-outline-default', false).text('Selected');
+            });
+        });
+    </script>
+}
+
+<div class="row my-5">
+    <div class="col">
+        <h1>@ViewBag.Title</h1>
+    </div>
+    <div class="col text-right">
+        <a href="/Dashboard" class="btn btn-default px-4">Save</a>
+        <a href="/Enroll/Success" class="btn btn-primary px-4">Submit</a>
+    </div>
+</div>
+
+<div class="row mb-3">
+    <div class="col-4">
+        <div class="sticky-top">
+            <small class="text-muted">Your Options</small>
+            <div class="p-3 my-2 card box-shadow border border-primary" style="overflow:hidden;">
+                <span class="red-dot"></span>
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fa fa-user fa-3x m-2"></i>
+                    </div>
+                    <div class="col-9">
+                        <h5 class="card-title">Add Yourself</h5>
+                        <p class="card-text">
+                            Enter basic personal information
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 my-2 card box-shadow border">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fa fa-heart-o fa-3x m-2"></i>
+                    </div>
+                    <div class="col-9">
+                        <h5 class="card-title">Add Medical</h5>
+                        <p class="card-text">
+                            Enter basic personal information
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 55%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">55%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 my-2 card box-shadow border" style="overflow:hidden;">
+                <span class="red-dot"></span>
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fa fa-suitcase fa-3x m-2"></i>
+                    </div>
+                    <div class="col-9">
+                        <h5 class="card-title">Add Basic Life</h5>
+                        <p class="card-text">
+                            Enter basic personal information
+                        </p>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="/Enroll" class="plain-link">
+                <div class="p-4 mt-3 dashed rounded text-center">
+                    <small class="text-muted">Add More Options</small>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-8" data-spy="scroll">
+
+        <div class="p-5 mb-3 card box-shadow">
+            <div class="row mt-1 no-gutter">
+                <div class="col">
+                    <h3 class="card-title">Personal Information</h3>
+                    <p>
+                        Welcomet to your Benefits Enrollment for 2018.  Before you begin making your selections we would like you to review your Personal Information below.
+                        If the information is not accurate, please click the "Edit" button to make the appropriate corrections.
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-3 no-gutters">
+                <div class="col">
+                    <h6 class="green-header">Employee Information</h6>
+                </div>
+            </div>
+            <div class="row py-2 border-bottom no-gutters">
+                <div class="col text-muted ">
+                    Your Employee ID
+                </div>
+                <div class="col text-muted">
+                    664783
+                </div>
+            </div>
+
+            <div class="row py-2 border-bottom no-gutters">
+                <div class="col text-muted ">
+                    Your Street Address
+                </div>
+                <div class="col">
+                    <input class="form-control-plaintext" value="1477 Barclay Blvd." />
+                </div>
+            </div>
+            <div class="row py-2 border-bottom no-gutters">
+                <div class="col text-muted ">
+                    Your City, State, and ZIP
+                </div>
+                <div class="col ">
+                    <input class="form-control-plaintext" />
+                </div>
+            </div>
+            <div class="row py-2 border-bottom no-gutters">
+                <div class="col text-muted ">
+                    Email Address
+                </div>
+                <div class="col ">
+                    <input class="form-control-plaintext" />
+                </div>
+            </div>
+            <div class="row py-2 border-bottom no-gutters">
+                <div class="col text-muted">
+                    Phone Number
+                </div>
+                <div class="col">
+                    <input class="form-control-plaintext" />
+                </div>
+            </div>
+            <div class="row py-2 border-bottom no-gutters">
+                <div class="col text-muted">
+                    Your Date of Birth
+                </div>
+                <div class="col text-muted">
+                    9/12/1942
+                </div>
+            </div>
+            <div class="row py-2 border-bottom no-gutters">
+                <div class="col text-muted">
+                    Your Original Hire Date
+                </div>
+                <div class="col text-muted">
+                    8/15/2008
+                </div>
+            </div>
+            <div class="row mt-5 no-gutters">
+                <div class="col">
+                    <h6 class="green-header">Emergency Contact Information</h6>
+                </div>
+            </div>
+            <div class="row py-2 border-bottom no-gutters">
+                <div class="col text-muted no-gutter">
+                    Contact Name
+                </div>
+                <div class="col">
+                    <input class="form-control-plaintext" value="Bill Jones" />
+                </div>
+            </div>
+            <div class="row py-2 border-bottom no-gutters">
+                <div class="col text-muted">
+                    Relation to Contract
+                </div>
+                <div class="col">
+                    <input class="form-control-plaintext" value="Father" />
+                </div>
+            </div>
+            <div class="row py-2 border-bottom no-gutters">
+                <div class="col text-muted">
+                    Contact Phone Number
+                </div>
+                <div class="col">
+                    <input class="form-control-plaintext" value="(123) 456-7890" />
+                </div>
+            </div>
+            <span class="mt-3">
+                <h5 class="blue-header">Go to Next step</h5>
+            </span>
+        </div>
+        <div class="p-5 mb-3 card box-shadow">
+            <div class="row mt-1 no-gutter">
+                <div class="col">
+                    <h3 class="card-title" id="#AddMedicalCoverage">Add Medical Coverage</h3>
+                    <small class="text-secondary">
+                        Your 2017 election was "Coordinated Care; Employee Only"
+                    </small>
+                </div>
+            </div>
+            <div class="row mt-3 no-gutters border-bottom">
+                <div class="col">
+                    <h6 class="green-header">Consumer Driven</h6>
+                </div>
+            </div>
+            <div class="row py-2 no-gutters">
+                <div class="col">
+                    Employee Only
+                </div>
+                <div class="col text-right">
+                    $32.00<span class="text-muted">/period</span>
+                    <button class="btn btn-primary btn-toggle px-4 ml-3 medical">Selected</button>
+                </div>
+            </div>
+            <div class="row py-2 no-gutters">
+                <div class="col">
+                    Employee + Spouse
+                </div>
+                <div class="col text-right">
+                    $64.00<span class="text-muted">/period</span>
+                    <button class="btn btn-outline-default btn-toggle ml-3 medical">Select</button>
+                </div>
+            </div>
+            <div class="row py-2 no-gutters ">
+                <div class="col">
+                    Employee + Family
+                </div>
+                <div class="col text-right">
+                    $86.00<span class="text-muted">/period</span>
+                    <button class="btn btn-outline-default btn-toggle ml-3 medical">Select</button>
+                </div>
+            </div>
+            <p class="text-secondary dashed-top pt-2 mt-3">
+                Co-pay: $15.00 per visit, Deductible: $1,000.00
+            </p>
+
+            <div class="row mt-3 no-gutters border-bottom">
+                <div class="col">
+                    <h6 class="green-header">Coordinated Care</h6>
+                </div>
+            </div>
+            <div class="row py-2 no-gutters">
+                <div class="col">
+                    Employee Only
+                </div>
+                <div class="col text-right">
+                    $32.00<span class="text-muted">/period</span>
+                    <button class="btn btn-primary btn-toggle px-4 ml-3 care">Selected</button>
+                </div>
+            </div>
+            <div class="row py-2 no-gutters">
+                <div class="col">
+                    Employee + Spouse
+                </div>
+                <div class="col text-right">
+                    $64.00<span class="text-muted">/period</span>
+                    <button class="btn btn-outline-default btn-toggle ml-3 care">Select</button>
+                </div>
+            </div>
+            <div class="row py-2 no-gutters ">
+                <div class="col">
+                    Employee + Family
+                </div>
+                <div class="col text-right">
+                    $86.00<span class="text-muted">/period</span>
+                    <button class="btn btn-outline-default btn-toggle ml-3 care">Select</button>
+                </div>
+            </div>
+            <p class="text-secondary dashed-top pt-2 mt-3">
+                Co-pay: $15.00 per visit, Deductible: $1,000.00
+            </p>
+            <span class="mt-3">
+                <h5 class="blue-header">Go to Next step</h5>
+            </span>
+        </div>
+        <div class="p-5 mb-3 card box-shadow">
+            <div class="row mt-1 no-gutter">
+                <div class="col">
+                    <h3 class="card-title" id="#AddMedicalCoverage">Add Basic Life</h3>
+                    <small class="text-secondary">
+                        Your 2017 election was "Basic Life; Employee Only"
+                    </small>
+                </div>
+            </div>
+            <div class="row mt-3 no-gutters border-bottom">
+                <div class="col">
+                    <h6 class="green-header">Basic Life Options</h6>
+                </div>
+            </div>
+            <div class="row py-2 no-gutters">
+                <div class="col">
+                    Employee Only
+                </div>
+                <div class="col text-right">
+                    $12.00<span class="text-muted">/period</span>
+                    <button class="btn btn-primary btn-toggle px-4 ml-3 medical">Selected</button>
+                </div>
+            </div>
+            <div class="row py-2 no-gutters">
+                <div class="col">
+                    Employee + Spouse
+                </div>
+                <div class="col text-right">
+                    32.00<span class="text-muted">/period</span>
+                    <button class="btn btn-outline-default btn-toggle ml-3 medical">Select</button>
+                </div>
+            </div>
+            <div class="row py-2 no-gutters ">
+                <div class="col">
+                    Employee + Family
+                </div>
+                <div class="col text-right">
+                    $46.00<span class="text-muted">/period</span>
+                    <button class="btn btn-outline-default btn-toggle ml-3 medical">Select</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

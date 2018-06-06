@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "My Beneficiaries";
+}
+@section js{
+    <script src="/Content/Scripts/Beneficiaries-Index.js"></script>
+}
+
+<div class="row mt-5">
+    <div class="col">
+        <h1 style="display: inline-block">@ViewBag.Title</h1>
+        <button id="AddBeneficiary" class="btn btn-outline-default mb-3 ml-3">Add Beneficiary</button>
+    </div>
+</div>
+<p class="pb-5">
+    A beneficiary is a person (or persons) who will receive the proceeds of a life insurance policy when the insured person passes away.
+    You can add and edit beneficiaries of your life insurance plan at any time.  Below are your current beneficiaries.
+</p>
+<div id="Beneficiaries"></div>
+
+<div class="modal fade" id="EditBeneficiary" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Beneficiary</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="hidden" name="Id" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="FirstName">First Name</label>
+                                <input type="text" class="form-control" name="FirstName">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="LastName">Last Name</label>
+                                <input type="text" class="form-control" name="LastName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Relationship">Relationship</label>
+                        <select name="Relationship" class="form-control">
+                            <option></option>
+                            <option>Spouse</option>
+                            <option>Child</option>
+                            <option>Step Child</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Sex">Gender</label>
+                        <select name="Sex" class="form-control">
+                            <option></option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Birthdate">Birthdate</label>
+
+                        <input class="form-control" name="Birthdate" data-provide="datepicker">
+                    </div>
+                    <div class="form-group">
+                        <label for="SSN">SSN</label>
+                        <input class="form-control" name="SSN">
+                    </div>
+                    <div class="form-group">
+                        <label for="Level">Level</label>
+                        <select class="form-control" name="Level">
+                            <option></option>
+                            <option>Primary</option>
+                            <option>Secondary</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Percent">Percent</label>
+                        <input class="form-control" type="number" name="Percent" maxlength="3" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="SaveBeneficiary" type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="AddBeneficiary" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Beneficiary</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="ConfirmRemoveBeneficiary" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Remove Beneficiary</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to remove this beneficiary?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="RemoveBeneficiary" type="button" class="btn btn-primary">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>

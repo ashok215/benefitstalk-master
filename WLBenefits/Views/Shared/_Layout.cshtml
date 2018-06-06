@@ -1,0 +1,134 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://www.wlbenefitsgroup.com/wp-content/uploads/2014/07/favicon-01.png" type="image/png">
+    <title>WL Benefits Group</title>
+    @Html.Partial("_CssClasses")
+    @RenderSection("css", required: false)
+</head>
+<body>
+    <div class="p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <div class="container d-flex flex-column align-items-center flex-md-row">
+            <h5 class="my-0  font-weight-normal">
+                <a href="/Dashboard" class="navbar-brand">WL Benefits Group</a>
+            </h5>
+            <nav class="mx-md-5 my-md-0  justify-content-center mr-md-auto">
+                <a class="p-2 text-dark" href="/Enroll">Enroll Now</a>
+                <a class="p-2 text-dark" href="/Dependents">Dependents</a>
+                <a class="p-2 text-dark" href="/Beneficiaries">Beneficiaries</a>
+                <a class="p-2 text-dark" href="/QualifyingEvents">Qualifying Events</a>
+            </nav>
+            <div class="notification-wrapper">
+                <a href="#" id="Notifications">
+                    <span class="badge badge-pill badge-primary notification-badge">3</span>
+                    <i class="fa fa-bell-o fa-1x mx-2 gray-label" aria-hidden="true"></i>
+                </a>
+                <div class="notification card box-shadow hide">
+                    <div>
+                        <div class="message">
+                            <h6>You have a message</h6>
+                            <small class="text-muted">HR just sent you an email, please check your inbox</small>
+                        </div>
+                        <div class="message">
+                            <h6>You have a message</h6>
+                            <small class="text-muted">HR just sent you an email, please check your inbox</small>
+                        </div>
+                        <div class="message">
+                            <h6>You have a message</h6>
+                            <small class="text-muted">HR just sent you an email, please check your inbox</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a class="pull-right" style="cursor: pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-cog fa-1x mx-2 gray-label" aria-hidden="true"></i>
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/Benefits">Benefits</a>
+                    <a id="Logout" class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+            <a class="mx-2 " style="display: inline-block" href="/Benefits" style="text-decoration: none; color: black !important;" >
+                <img class="rounded-circle" style="height:36px;" src="~/Content/Images/photo.jpg" />
+                Welcome, Phil!
+            </a>
+        </div>
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer class="pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <p>
+                        BenefitsTalk &trade; powered by WL Benefits Group
+                    </p>
+                    <p>
+                        &copy; 2018 WL Benefits Group, Inc. All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        <a class="plain-link" target="_blank" href="http://www.wlbenefitsgroup.com/"> www.WLBenefitsGroup.com</a> <br />
+                        2345 Waukegan Rd, STE #140 <br />
+                        Bannockburn, Illinois, 60015 <br />
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="LogoutConfirm" class="hide">
+        <div class="logout-backdrop"></div>
+        <div class="logout py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col offset-2">
+                        <h3 style="color: white"> <i class="fa fa-sign-out"> </i> Logout Phil?</h3>
+                        <p style="color: white">You can improve your security further after logging out by closing this opened browser</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 text-right">
+                        <a href="/Login" class="btn btn-outline-default">Yes</a>
+                        <a href="#" id="CancelLogout" class="btn btn-outline-default">No</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification-backdrop hide">
+    </div>
+
+
+    @Html.Partial("_Javascripts")
+    @RenderSection("js", required: false)
+    <script>
+        $(function () {
+            $('#Logout').on('click', () => {
+                $('body').toggleClass("modal-open", true);
+                $('#LogoutConfirm').toggleClass("hide", false);
+            });
+            $('#CancelLogout').on('click', () => {
+                $('body').toggleClass("modal-open", false);
+                $('#LogoutConfirm').toggleClass("hide", true);
+            });
+            $('.notification-backdrop').on('click', () => {
+                $('.notification').toggleClass("hide", true);
+                $('.notification-backdrop').toggleClass("hide", true);
+            });
+            $('#Notifications').on('click', () => {
+                $('.notification').toggleClass("hide", false);
+                $('.notification-backdrop').toggleClass("hide", false);
+            });
+        });
+    </script>
+</body>
+</html>

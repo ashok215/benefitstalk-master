@@ -1,0 +1,154 @@
+﻿@{
+    ViewBag.Title = "My Dependents";
+}
+@section js{
+    <script src="/Content/Scripts/Dependents-Index.js"></script>
+}
+
+<div class="row mt-5">
+    <div class="col">
+        <h1 style="display: inline-block">@ViewBag.Title</h1>
+        <button id="AddDependent" class="btn btn-outline-default mb-3 ml-3">Add Dependent</button>
+        <button data-toggle="modal" data-target="#AddDocument" class="btn btn-outline-default mb-3 ml-3">Add Document</button>
+    </div>
+</div>
+<p class="pb-5">
+    Please note that if the status of your dependents says "approved," that means your dependentis covered under your insurance plans. If the status shows "pending," that means the DEV documents you submitted are still under review.
+    If your dependent status shows "declined" that means the DEV documntation you submitted was insufficient. To see why a document was insufficient, click here.
+</p>
+<div id="Dependents"></div>
+@*<h5>
+    My Dependent Documents
+</h5>
+<div class="row my-3 card-deck no-gutters">
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <div class="row no-gutters">
+                    <div class="col-9">
+                        <label class="text-muted">Marriage License</label>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-trash-o fa-1x text-muted pull-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <div class="row no-gutters">
+                    <div class="col-9">
+                        <label class="text-muted">Birth Certificate</label>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-trash-o fa-1x text-muted pull-right"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>*@
+<div class="modal fade" id="EditDependent" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Dependent</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="hidden" name="Id" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="FirstName">First Name</label>
+                                <input type="text" class="form-control" name="FirstName">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="LastName">Last Name</label>
+                                <input type="text" class="form-control" name="LastName">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Relationship">Relationship</label>
+                        <select name="Relationship" class="form-control">
+                            <option></option>
+                            <option>Spouse</option>
+                            <option>Child</option>
+                            <option>Step Child</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Sex">Gender</label>
+                        <select name="Sex" class="form-control">
+                            <option></option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Birthdate">Birthdate</label>
+                        <input class="form-control" name="Birthdate" data-provide="datepicker">
+                    </div>
+                    <div class="form-group">
+                        <label for="SSN">SSN</label>
+                        <input class="form-control" name="SSN">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="SaveDependent" type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="AddDocument" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Documents</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01">
+                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="ConfirmRemoveDependent" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Remove Dependent</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to remove this dependent?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="RemoveDependent" type="button" class="btn btn-primary">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>

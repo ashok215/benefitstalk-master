@@ -1,0 +1,137 @@
+﻿@{
+    ViewBag.Title = "Qualifying Life Events";
+}
+@section js{
+    <script src="/Content/Scripts/QualifyingEvents-Index.js"></script>
+}
+
+
+<div class="row mt-5">
+    <div class="col">
+        <h1 style="display: inline-block">@ViewBag.Title</h1>
+        <button id="AddQualifyingEvent" class="btn btn-outline-default mb-3 ml-3">Add Qualifying Life Event</button>
+        <button data-toggle="modal" data-target="#AddDocument" class="btn btn-outline-default mb-3 ml-3">Add Document</button>
+    </div>
+</div>
+<p class="pb-5">
+    Although you've uploaded documentation for a qualifying event, it must be approved in order for you to make changes to your current elections.
+    Below you can view the status of the documents you've submitted for each of your qualifying events.
+</p>
+
+<div id="QualifyingEvents"></div>
+
+<div class="modal fade" id="EditQualifyingEvent" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"> Qualifying Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <input type="hidden" name="Id" />
+                    <input type="hidden" name="Submitted" />
+                    <input type="hidden" name="Notes" />
+                    <div class="form-group">
+                        <label for="EventType">Event type</label>
+                        <select name="EventType" class="form-control event-type">
+                            <option></option>
+                            <option data-index="0">Birth, adoption, or legal guardianship</option>
+                            <option data-index="1">Marriage</option>
+                            <option data-index="2">Death</option>
+                            <option data-index="3">Divorce</option>
+                            <option data-index="4">Loss of other coverage</option>
+                        </select>
+                    </div>
+                    <small id="Description" class="d-inline-block mb-4 mt-2 hide">
+                    </small>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="Comments">Notes</label>
+                                <textarea type="text" class="form-control" name="Comments"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-file-pdf-o"></i></span>
+                                </div>
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="inputGroupFile01">
+                                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="SaveQualifyingEvent" type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="AddQualifyingEvent" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Qualifying Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="AddDocument" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Documents</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="inputGroupFile01">
+                    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="ConfirmRemoveQualifyingEvent" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Remove Qualifying Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to remove this qualifying event?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="RemoveQualifyingEvent" type="button" class="btn btn-primary">Remove</button>
+            </div>
+        </div>
+    </div>
+</div>
