@@ -11,21 +11,21 @@
     @RenderSection("css", required: false)
 </head>
 <body>
-    <div class="p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <div class="theme-background p-3 px-md-4 mb-3 border-bottom box-shadow">
         <div class="container d-flex flex-column align-items-center flex-md-row">
             <h5 class="my-0  font-weight-normal">
-                <a href="/Dashboard" class="navbar-brand">WL Benefits Group</a>
+                <a href="/Dashboard" class="navbar-brand text-light">WL Benefits Group</a>
             </h5>
             <nav class="mx-md-5 my-md-0  justify-content-center mr-md-auto">
-                <a class="p-2 text-dark" href="/Enroll">Enroll Now</a>
-                <a class="p-2 text-dark" href="/Dependents">Dependents</a>
-                <a class="p-2 text-dark" href="/Beneficiaries">Beneficiaries</a>
-                <a class="p-2 text-dark" href="/QualifyingEvents">Qualifying Events</a>
+                <a class="p-2 text-light" href="/Enroll">Enroll Now</a>
+                <a class="p-2 text-light" href="/Dependents">Dependents</a>
+                <a class="p-2 text-light" href="/Beneficiaries">Beneficiaries</a>
+                <a class="p-2 text-light" href="/QualifyingEvents">Qualifying Events</a>
             </nav>
             <div class="notification-wrapper">
                 <a href="#" id="Notifications">
                     <span class="badge badge-pill badge-primary notification-badge">3</span>
-                    <i class="fa fa-bell-o fa-1x mx-2 gray-label" aria-hidden="true"></i>
+                    <i class="fa fa-bell-o fa-1x mx-2 gray-label" style="color: white;" aria-hidden="true"></i>
                 </a>
                 <div class="notification card box-shadow hide">
                     <div>
@@ -46,40 +46,47 @@
             </div>
             <div class="dropdown">
                 <a class="pull-right" style="cursor: pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="fa fa-cog fa-1x mx-2 gray-label" aria-hidden="true"></i>
+                    <i class="fa fa-cog fa-1x mx-2 gray-label" style="color: white;" aria-hidden="true"></i>
                 </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="/Benefits">Benefits</a>
                     <a id="Logout" class="dropdown-item" href="#">Logout</a>
                 </div>
             </div>
-            <a class="mx-2 " style="display: inline-block" href="/Benefits" style="text-decoration: none; color: black !important;" >
+            <a class="mx-2 text-light" style="display: inline-block" href="/Benefits" style="text-decoration: none; " >
                 <img class="rounded-circle" style="height:36px;" src="~/Content/Images/photo.jpg" />
                 Welcome, Phil!
             </a>
         </div>
     </div>
-    <div class="container">
+    <div class="container padding-bottom-45" style="">
         @RenderBody()
     </div>
-    <footer class="pt-4">
+    <footer class="pt-4 theme-background text-light mt-5" >
         <div class="container">
             <div class="row">
-                <div class="col-md-5">
+                <div class="col-6">
                     <p>
                         BenefitsTalk &trade; powered by WL Benefits Group
                     </p>
-                    <p>
-                        &copy; 2018 WL Benefits Group, Inc. All Rights Reserved
-                    </p>
+                   
                 </div>
-                <div class="col-md-4">
+                <div class="col-6 text-right">
                     <p>
                         <a class="plain-link" target="_blank" href="http://www.wlbenefitsgroup.com/"> www.WLBenefitsGroup.com</a> <br />
                         2345 Waukegan Rd, STE #140 <br />
                         Bannockburn, Illinois, 60015 <br />
                     </p>
                 </div>
+                <div class="col-6">
+                    <p>
+                        &copy; 2018 WL Benefits Group, Inc. All Rights Reserved
+                    </p>
+                </div>
+                <div class="col-6 text-right">
+                    <i class="fa fa-facebook-official mx-2" style="color:white; font-size: 30px;" aria-hidden="true"></i>
+                    <i class="fa fa-linkedin-square" style="color:white; font-size: 30px;" aria-hidden="true"></i>
+                    </div>
             </div>
         </div>
     </footer>
@@ -106,7 +113,49 @@
 
     <div class="notification-backdrop hide">
     </div>
+    <style>
+        .theme-background {
+            background: #00c6ff; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0072ff, #00c6ff); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
 
+        .fa-theme {
+            color: #0073FF; /* fallback for old browsers */
+          
+        }
+
+        .btn-primary , .btn-primary:hover {
+             background: #00c6ff; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0072ff, #00c6ff); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border:none;
+            color:white;
+        }
+
+        .btn-primary{
+            box-shadow: 2px 2px 5px 1px rgba(00,00,00,0.2);
+        }
+
+        .btn-primary:hover{
+            box-shadow: none;
+        }
+
+        a:hover{
+            text-decoration: none;
+        }
+
+        body{
+            background: white !important;
+        }
+
+        .padding-bottom-45{
+            padding-bottom: 45px;
+        }
+
+        
+
+    </style>
 
     @Html.Partial("_Javascripts")
     @RenderSection("js", required: false)

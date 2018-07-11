@@ -3,47 +3,120 @@
     <link type="text/css" rel="stylesheet" href="/Content/Styles/handrules.css" />
 }
 <h1 class="my-5">@ViewBag.Title</h1>
-<div class="card-deck mb-3">
-    <div class="card mb-4 box-shadow">
-        <div class="card-body ">
-            <i class="my-4 fa fa-folder-open-o fa-5x"></i>
-            <h3>Open Enrollment</h3>
-            <p class="card-text">
-                Click here to enroll in benefits for 2018.  Open enrollment is November 12, 2017.
-            </p>
-            <a class="btn btn-primary" href="/Enroll">Continue</a>
+
+<div class="row card-deck mb-3">
+    <div class="col-4 flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+            @*<div class="front">
+                 front content 
+
+                <div class="card mb-4 box-shadow" style="height:400px;">
+                    <div class="overlay-container overlay-visible">
+                        <img src="~/Content/Images/open_enrollment.jpg" alt="" style="max-width:191%;height:400px">
+                        <div class="overlay-bottom hidden-sm-down">
+                            <div class="text">
+                                <p class="lead margin-clear">Open Enrollment</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>*@
+            <div class="back">
+                <!-- back content -->
+                <div class="card mb-4 box-shadow" style="height:400px;">
+                    <div class="card-body">
+                        <i class="my-4 fa-theme fa fa-folder-open-o fa-5x"></i>
+                        <h3>Open Enrollment</h3>
+                        <p class="card-text">
+                            Click here to enroll in benefits for 2018.  Open enrollment is November 12, 2017.
+                        </p>
+                        <a class="btn-outline-default  btn btn-primary" href="/Enroll">Continue</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-8">
-        <div class="row card-deck mb-4">
-            <div class="card box-shadow pointer">
-                <a class="card-link" href="/Benefits">
-                    <div class="card-body">
-                        <i class="my-4 fa fa-info-circle fa-3x"></i>
-                        <h4 class="card-title horizontal d-inline-block ml-2">My Information</h4>
-                        <p class="card-text">
-                            Access important information about yourself, your dependents, your current benefits, and more.
-                        </p>
+
+            <div class="col-4 flip-container  " ontouchstart="this.classList.toggle('hover');">
+                <div class="flipper">
+                    @*<div class="front">
+                         front content 
+
+                        <div class="card box-shadow pointer">
+                            <div class="overlay-container overlay-visible">
+                                <img src="~/Content/Images/My_Info.jpg" alt="" style="max-width:191%;height:400px">
+
+                                <div class="overlay-bottom hidden-sm-down">
+                                    <div class="text">
+                                        <p class="lead margin-clear">Plan Summary</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>*@
+                    <div class="back">
+                        <!-- back content -->
+                        <div class="card box-shadow pointer" style="height:400px">
+                            <div class="card-body">
+                                <i class="my-4 fa-theme fa fa-info-circle fa-3x"></i>
+                                <h3>View Elections</h3>
+                                <p class="card-text">
+                                    Access important information about yourself, your dependents, your current benefits, and more.
+
+                                </p>
+                                <a class="btn-outline-default btn btn-primary" href="/Benefits">Continue</a>
+                            </div>
+                        </div>
                     </div>
-                </a>
+                </div>
             </div>
-            <div class="card box-shadow pointer">
-                <a class="card-link" href="/QualifyingEvents">
-                    <div class="card-body">
-                        <i class="my-4 fa fa-calendar fa-3x"></i>
-                        <h4 class="card-title horizontal d-inline-block ml-2">Qualifying Event</h4>
-                        <p class="card-text">
-                            Not open enrollment but need to enroll? Send us necessary documents so we can get you enrolled!
-                        </p>
+
+
+            
+                <div class="col-4 flip-container  " ontouchstart="this.classList.toggle('hover');">
+                    <div class="flipper">
+                        @*<div class="front">
+                             front content 
+
+                            <div class="card box-shadow pointer">
+                                <div class="overlay-container overlay-visible">
+                                    <img src="~/Content/Images/Qual.jpg" alt="" style="max-width:190%;height:400px">
+
+                                    <div class="overlay-bottom hidden-sm-down">
+                                        <div class="text">
+                                            <p class="lead margin-clear">Qualifying event</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>*@
+
+                        <div class="back">
+                            <div class="card box-shadow pointer" style="height:400px">
+                                <a class="card-link" href="/QualifyingEvents">
+                                    <div class="card-body ">
+                                        <i class="my-4 fa-theme fa fa-calendar fa-3x"></i>
+                                        <h4 class="card-title horizontal d-inline-block ml-2">Qualifying Event</h4>
+                                        <p class="card-text">
+                                            Not open enrollment but need to enroll? Send us necessary documents so we can get you enrolled!
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </a>
-            </div>
-        </div>
-        <div class="row card-deck mb-4">
+
+                </div>
+            
+
+
             <div class="card box-shadow pointer">
                 <a class="card-link" href="/Dependents">
                     <div class="card-body">
-                        <i class="my-4 fa fa-users fa-3x"></i>
+                        <i class="my-4 fa-theme fa fa-users fa-3x"></i>
                         <h4 class="card-title horizontal d-inline-block ml-2">Dependents</h4>
                         <p class="card-text">
                             Submit documentation to substantiate eligibility of your dependent(s) under your plan rules.
@@ -51,10 +124,12 @@
                     </div>
                 </a>
             </div>
+
+
             <div class="card box-shadow pointer">
                 <a class="card-link" href="/Beneficiaries">
                     <div class="card-body">
-                        <i class="my-4 fa fa-address-book-o fa-3x"></i>
+                        <i class="my-4 fa-theme fa fa-address-book-o fa-3x"></i>
                         <h4 class="card-title horizontal d-inline-block ml-2">Beneficiaries</h4>
                         <p class="card-text">
                             View and edit your life insurance beneficiaries at any time.
@@ -63,116 +138,135 @@
                 </a>
             </div>
         </div>
-    </div>
-</div>
+   
 
-<div class="row">
-    <div class="col-4">
-        <div class="card mb-4 box-shadow">
-            <div class="card-body">
-                <h4 class="mb-4">Notifications</h4>
-                <h6 class="text-muted">
-                    <span class="font-weight-bold">
-                        Your DEV documents weren't approved
-                    </span>
-                    </br>
-                    <small>
-                        2 days ago
-                    </small>
-                </h6>
-                <p class="card-text">
-                    Hi Stephanie, we're sorry, but the Dependent Eligibility Verification documentation you submitted was insufficient.
-                    To See a list of sufficient documentation you can send us, please click on "Dependents" on the main menu page.
-                    Please send us proper documentation ASAP so we can ensure your dependents get covered under your elected plans.
-                    If you have questions, you can contact us at (866) XXX-XXXX on Monday through Friday, 7:30AM to 6:00PM CST.
 
-                </p>
+
+
+
+
+
+    <div class="row">
+        <div class="col-lg-4 mb-3">
+            <div class="card mb-4 box-shadow" style="height:100%;">
+                <div class="card-body">
+                    <h4 class="mb-4">Notifications</h4>
+                    <h6 class="text-muted">
+                        <span class="font-weight-bold">
+                            Your DEV documents weren't approved
+                        </span>
+                        </br>
+                        <small>
+                            2 days ago
+                        </small>
+                    </h6>
+                    <p class="card-text">
+                        Hi Stephanie, we're sorry, but the Dependent Eligibility Verification documentation you submitted was insufficient.
+                        To See a list of sufficient documentation you can send us, please click on "Dependents" on the main menu page.
+                        Please send us proper documentation ASAP so we can ensure your dependents get covered under your elected plans.
+                        If you have questions, you can contact us at (866) XXX-XXXX on Monday through Friday, 7:30AM to 6:00PM CST.
+
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-4">
-        <div class="card mb-4 box-shadow" style="height:404px;">
-            <div class="card-body">
-                <i class="my-4 fa fa-book fa-3x"></i>
-                <h4 class="card-title d-inline-block">Hand Rules Review-2019</h4>
-                <p class="card-text">
-                    Please open the Hand Calc , Review and Docu Sign If Everything looks correct.
-                </p>
 
 
-                </br>
 
 
-                <button type="button" class="btn btn-primary" id="hrclient" data-toggle="modal" data-target="#myModal">Client</button>
-                <div id="hrstatus">
-                    <label id="lblItemPrice"><i class="fa fa-hourglass-half" aria-hidden="true"></i>&nbsp&nbsp&nbsp<b>Pending</b></label>
 
-                </div>
-                <!-- Modal -->
-                <div class="modal fade" id="myModal" role="dialog">
-                    <div class="modal-dialog">
 
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h4 class="modal-title" style="float:left">Hand Rules for 2019</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-                            </div>
-                            <div class="modal-body">
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. 
-                                Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
-                            </div>
-                            <div class="modal-footer">
+        <div class="col-lg-4 mb-3"">
+            <div class="card mb-4 box-shadow" style="height:100%;">
+                <div class="card-body">
+                    <i class="my-4 fa-theme fa fa-book fa-3x"></i>
+                    <h4 class="card-title d-inline-block">Enrollment Rules Review-2019</h4>
+                    <p class="card-text">
+                        Please open the Hand Calc , Review and Docu Sign If Everything looks correct.
+                    </p>
 
-                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color:#808080;"><i class="fa fa-download" aria-hidden="true"></i> &nbsp Download</button>
-                                <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color:green;">Docu Sign</button>
-                               
-                            </div>
-                        </div>
+
+                    </br>
+
+
+                    <button type="button" class="btn btn-primary" id="hrclient" data-toggle="modal" data-target="#myModal">Client</button>
+                    <div id="hrstatus">
+                        <label id="lblItemPrice"><i class="fa fa-hourglass-half" aria-hidden="true"></i>&nbsp&nbsp&nbsp<b>Pending</b></label>
 
                     </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title" style="float:left">Hand Rules for 2019</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                                </div>
+                                <div class="modal-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo.
+                                        Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color:#808080;"><i class="fa fa-download" aria-hidden="true"></i> &nbsp Download</button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal" style="background-color:green;">Docu Sign</button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    </br>
+                    <!-- <a href="mailto:support@wlbenefitsgroup.com" class="btn btn-default">Voya</a>-->
+                    <button type="button" class="btn btn-default" id="hrclient" disabled>Voya</button>
+                    <div id="hrstatus">
+                        <label id="lblItemPrice"><i class="fa fa-hourglass-half" aria-hidden="true"></i>&nbsp&nbsp&nbsp<b>Pending</b></label>
+
+                    </div>
+
+                    </br>
+                    <button type="button" class="btn btn-default" id="hrclient" disabled>WL Benefits </button>
+                    <div id="hrstatus3">
+                        <i class="fa fa-check" aria-hidden="true"></i>&nbsp&nbsp<b>Reviewed</b></label>
+
+                    </div>
+
                 </div>
-
-
-                </br>
-                <!-- <a href="mailto:support@wlbenefitsgroup.com" class="btn btn-default">Voya</a>-->
-                <button type="button" class="btn btn-default" id="hrclient" disabled>Voya</button>
-                <div id="hrstatus">
-                    <label id="lblItemPrice"><i class="fa fa-hourglass-half" aria-hidden="true"></i>&nbsp&nbsp&nbsp<b>Pending</b></label>
-
-                </div>
-
-                </br>
-                <button type="button" class="btn btn-default" id="hrclient" disabled>WL Benefits </button>
-                <div id="hrstatus3">
-                    <i class="fa fa-check" aria-hidden="true"></i>&nbsp&nbsp<b>Reviewed</b></label>
-
-                </div>
-
             </div>
         </div>
-    </div>
-    <div class="col-4">
-        <div class="card mb-4 box-shadow" style="height:404px;">
-            <div class="card-body">
-                <i class="my-4 fa fa-life-ring fa-3x"></i>
-                <h4 class="card-title d-inline-block">Help &amp; Support</h4>
-                <p class="card-text">
-                    Contact a representative for assistance or view our helpful glossary.
-                </p>
-                <p class="card-text">
-                    Phone: (866) XXX-XXXX
-                </p>
-                <p class="card-text">
-                    7:30AM - 6:00PM CST (M-F)
-                </p>
-                <button type="button" class="btn btn-primary">LIVE CHAT</button>
-                </br>
-                </br>
-                <a href="mailto:support@wlbenefitsgroup.com" class="btn btn-primary">EMAIL US</a>
+
+
+
+
+        <div class="col-lg-4 mb-3"">
+            <div class="card mb-4 box-shadow" style="height:100%;">
+                <div class="card-body">
+                    <i class="my-4 fa-theme fa fa-life-ring fa-3x"></i>
+                    <h4 class="card-title d-inline-block">Help &amp; Support</h4>
+                    <p class="card-text">
+                        Contact a representative for assistance or view our helpful glossary.
+                    </p>
+                    <p class="card-text">
+                        Phone: (866) XXX-XXXX
+                    </p>
+                    <p class="card-text">
+                        7:30AM - 6:00PM CST (M-F)
+                    </p>
+                    <button type="button" class="btn btn-primary">LIVE CHAT</button>
+                    </br>
+                    </br>
+                    <a href="mailto:support@wlbenefitsgroup.com" class="btn btn-primary">EMAIL US</a>
+                </div>
             </div>
         </div>
+
     </div>
 
-</div>
