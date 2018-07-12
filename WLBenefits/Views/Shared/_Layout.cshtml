@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    
+    <link href="~/Content/Styles/flipclock.css" rel="stylesheet" />
+    
     <link rel="icon" href="http://www.wlbenefitsgroup.com/wp-content/uploads/2014/07/favicon-01.png" type="image/png">
     <title>WL Benefits Group</title>
     @Html.Partial("_CssClasses")
@@ -59,7 +62,7 @@
             </a>
         </div>
     </div>
-    <div class="container padding-bottom-45" style="">
+    <div class="container padding-bottom-200" style="">
         @RenderBody()
     </div>
     <footer class="pt-4 theme-background text-light mt-5" >
@@ -149,8 +152,8 @@
             background: white !important;
         }
 
-        .padding-bottom-45{
-            padding-bottom: 45px;
+        .padding-bottom-200{
+            padding-bottom: 200px;
         }
 
         
@@ -160,6 +163,30 @@
     @Html.Partial("_Javascripts")
     @RenderSection("js", required: false)
     <script>
+
+
+
+			var clock;
+
+			$(document).ready(function() {
+
+				// Grab the current date
+				var currentDate = new Date();
+
+				// Set some date in the future. In this case, it's always Jan 1
+				var futureDate  = new Date(currentDate.getFullYear() + 1, 0, 1);
+
+				// Calculate the difference in seconds between the future and current date
+				var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+
+				// Instantiate a coutdown FlipClock
+				clock = $('.clock').FlipClock(diff, {
+					clockFace: 'DailyCounter',
+					countdown: true
+				});
+			});
+    
+
         $(function () {
             $('#Logout').on('click', () => {
                 $('body').toggleClass("modal-open", true);

@@ -112,6 +112,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Scripts\flipclock.js" />
+    <Content Include="Content\Styles\flipclock.css" />
     <Content Include="Content\Styles\Fonts\fontawesome-webfont.svg" />
     <Content Include="Content\Images\arrow.png" />
     <Content Include="Content\Images\logo_name.jpg" />
