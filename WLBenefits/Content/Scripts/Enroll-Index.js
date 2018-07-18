@@ -1,12 +1,41 @@
 ﻿$(function () {
     // temporary 
     initDragAndDrop();
+    var SelectedPlans = "";
+      $(".selected-plans").append("<small class=\"text-muted\">Selected Coverage Options</small>");
+    $(".plan-disabled").each(function () {
+        SelectedPlans = $(this).children(".header").html();
+        
+        $(".selected-plans").append("<div class=\"card\"> <div class=\"card-body\">" + SelectedPlans + "</div></div><br/>");
+    })
+
+    $(".selections").on("mouseenter",function () {
+        $(".selected-plans").empty();
+        $(".selected-plans").append("<small class=\"text-muted\">Selected Coverage Options</small>");
+        $(".plan-disabled").each(function () {
+            SelectedPlans = $(this).children(".header").html();
+            $(".selected-plans").append("<div class=\"card\"> <div class=\"card-body\">" + SelectedPlans + "</div></div><br/>");
+        })
+    })
+    $(".non-selections").on("mouseenter", function () {
+        
+        $(".selected-plans").empty();
+        $(".selected-plans").append("<small class=\"text-muted\">Selected Coverage Options</small>");
+        $(".plan-disabled").each(function () {
+            SelectedPlans = $(this).children(".header").html();
+
+            $(".selected-plans").append("  <div class=\"card\"> <div class=\"card-body\">" + SelectedPlans + "</div></div><br/>");
+        })
+    })
+
+
 });
 
 
 
+
 function initDragAndDrop() {
-    $(".col-4 .plans:not(.plan-disabled)").draggable({
+    $(".col-3 .plans:not(.plan-disabled)").draggable({
         snap: ".plan-placeholder",
         helper: "clone",
         start: function () {
@@ -26,15 +55,20 @@ function initDragAndDrop() {
                             },
                             stop: function (event, ui) {
                                 var id = $(this).data().id;
-                                $(".col-4 [data-id='" + id + "']").removeClass("plan-disabled");
+                                $(".col-3 [data-id='" + id + "']").removeClass("plan-disabled");
                                 $(this).remove();
                                 initDragAndDrop();
                             }
                         });
+                      
+                        
+
                     }, 1000);
                     $(this).removeClass('dashed');
                     $(this).append(html);
+                    
                 }
+
             });
         },
         drag: function () {

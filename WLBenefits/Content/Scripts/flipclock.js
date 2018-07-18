@@ -320,7 +320,7 @@ var FlipClock;
  * @licesnse   http://www.opensource.org/licenses/mit-license.php
  */
 
-console.log("loading");
+
 
 (function($) {
 	
